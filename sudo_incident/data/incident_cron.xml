@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="cron_sudo_incident_sla_run" forcecreate="True" model="ir.cron">
+            <field name="name">Check Sla Breaches</field>
+            <field name="active" eval="True" />
+            <field name="model_id" ref="model_sudo_incident_sudo_incident"/>
+            <field name="type">ir.actions.server</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="state">code</field>
+            <field name="code">model.test_cron_sls()</field>
+            <field name="interval_number">3</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+             <field name="doall" eval="False"/>
+        </record>
+        <record id="mail_template_sudo_incident_mail" model="mail.template">
+            <field name="name">Incident: Send by email</field>
+            <field name="email_from">${ctx['email_from']}</field>
+            <field name="subject">${object.incident_id} - ${object.title}</field>
+            <field name="lang">${object.lang}</field>
+            <field name="email_to">${for email in object.mail_reminder_abc():}</field>
+            <field name="model_id" ref="sudo_incident.model_sudo_incident_sudo_incident"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html" type="xml">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear Team
+                        <br/>
+                        <br/>
+                        A new Incident has been created.
+                        <br/>
+                        Incident ID: ${object.incident_id}
+                        <br/>
+                        Incident Title: ${object.title}
+                        <br/>
+                        <br/>
+                        If you have any questions, please let us know.
+                        <br/>
+                        <br/>
+                        Thank you,
+                        <br/>
+                        <br/>
+                        Sent by SUDO Connect
+                    </p>
+                </div>
+                <div class="row">
+                    <p>
+                        <a style="background-color: #352c9f;color: white; padding: 9px 17px;text-align: center; text-decoration: none;display: inline-block;" href="${object.get_full_url()}">View Incident</a>
+                    </p>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>

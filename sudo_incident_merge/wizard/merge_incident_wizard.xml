@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="merge_incident_wiz_view" model="ir.ui.view">
+            <field name="name">incident.merge.wizard.form</field>
+            <field name="model">incident.merge.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Merge Ticket">
+                    <separator color="grey"
+                               string="This wizard will allow you to merge tickets into primary ticket. It can also allow you to create new ticket from the selected ticket as a part of merge process."/>
+                    <group>
+                        <group>
+                            <field name="title"/>
+                            <field name="sla_branches_in"/>
+                            <field name="status"/>
+                            <field name="current_user"/>
+                            <field name="partner_id"/>
+                            <field name="description"/>
+                            <field name="helpdesk_ticket_id"/>
+                            <!--                                <field name="ticket_type_id"/>-->
+                            <field name="incident_subject"
+                                   attrs="{'invisible' : [('create_new_incident','!=',True)],'required': [('create_new_incident','=',True)]}"/>
+                            <!--                                <field name="priority"/>-->
+                            <!--                                <field name="team_id"/>-->
+                        </group>
+                        <group>
+                            <field name="create_new_incident"/>
+                            <field name="merge_reason"/>
+                            <field name="is_sure"/>
+                            <field name="primary_id" domain="[('id','in', merge_ids)]"
+                                   attrs="{'invisible': [('create_new_incident','==',True)], 'required' : [('create_new_incident','!=',True)]}"/>
+                            <field name="incident_tag_new" widget="many2many_tags"/>
+                            <field name='merge_ids' widget="many2many_tags" invisible='True'/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name='merge ticket' string="Incident to Merge">
+                            <field name="merge_incident_line_ids" readonly='1'>
+                                <tree name="ticket_line" editable="bottom">
+                                     <field name="ticket_id"/>
+                                    <field name="title"/>
+                                    <field name="description"/>
+
+                                    <field name="subject"/>
+                                    <field name="sla_branches_in"/>
+                                    <field name="status"/>
+                                    <field name="partner_id"/>
+
+                                    <field name="helpdesk_ticket_id"/>
+                                    <!--                                        <field name="ticket_type_id"/>-->
+                                    <!--                                        <field name="priority"/>-->
+                                    <!--                                         <field name="incident_tag_new"/>-->
+                                    <!--                                        <field name="team_id"/>-->
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button name="action_merge_incident" type="object" string="Merge Now" class="btn-primary"/>
+                        or
+                        <button string="_Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_merge_incidents">
+            <field name="name">Merge Incident</field>
+            <field name="res_model">incident.merge.wizard</field>
+            <field name="binding_model_id" ref="sudo_incident.model_sudo_incident_sudo_incident"/>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

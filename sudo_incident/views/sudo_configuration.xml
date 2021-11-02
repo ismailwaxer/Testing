@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="incident_configuration_action" model="ir.actions.act_window">
+            <field name="name">Incident Configuration</field>
+            <field name="res_model">sudo_incident.configuration</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Configuration" id="sudo_incident_configuration_menu" parent="sudo_incident.menu_root"
+                  action="incident_configuration_action"/>
+
+        <menuitem name="SLA" id="sudo_incident_sla_menu" parent="sudo_incident_configuration_menu"
+                  action="incident_configuration_action"/>
+
+        <record id="sudo_incident_sla_form_view" model="ir.ui.view">
+            <field name="name">SLA</field>
+            <field name="model">sudo_incident.configuration</field>
+            <field name="arch" type="xml">
+                <form string="SLA" duplicate="0">
+                    <sheet>
+                        <group>
+                            <field name="priority1"/>
+                            <field name="priority2"/>
+                            <field name="priority3"/>
+                            <field name="priority4"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="sudo_incident_sla_tree_view" model="ir.ui.view">
+            <field name="name">SLA Tree View</field>
+            <field name="model">sudo_incident.configuration</field>
+            <field name="arch" type="xml">
+                <tree string="SLA">
+                    <field name="priority1"/>
+                    <field name="priority2"/>
+                    <field name="priority3"/>
+                    <field name="priority4"/>
+                </tree>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

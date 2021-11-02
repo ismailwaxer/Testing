@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sudo_incident_custom_inherit_form_view_merge" model="ir.ui.view">
+            <field name="name">Sudo Incident Inherit form</field>
+            <field name="model">sudo_incident.sudo_incident</field>
+            <field name="inherit_id" ref="sudo_incident.sudo_incident_form_id"/>
+            <field name="arch" type="xml">
+                <!-- <xpath expr="//notebook/page[last()]" position="after"> -->
+                <xpath expr="//sheet" position="inside">
+                    <notebook invisible="True">
+                        <page name="merge_tickets" string="Secondary Incident" attrs="{'invisible' : [('is_secondry','!=',True)]}">
+                            <field name="merge_ticket_ids"  domain="[('active','=', False)]" invisible="True"/>
+                            <field name="is_secondry" invisible="True"/>
+                        </page>
+                    </notebook>
+                </xpath>
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="primary_ticket_id" attrs="{'invisible' : [('is_secondry','!=',True)]}"/>
+                    <field name="merge_reason" attrs="{'invisible' : [('is_secondry','!=',True)]}"/>
+                </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="show_secondry_ticket" type="object" string="Secondry Incident" icon="fa-pencil-square-o" class="oe_stat_button" attrs="{'invisible' : [('is_secondry','!=',True)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

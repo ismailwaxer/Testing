@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="incident_tags_action" model="ir.actions.act_window">
+            <field name="name">Incident Tags</field>
+            <field name="res_model">sudo_incident.tags</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem name="Configuration" id="sudo_incident_configuration_menu" parent="sudo_incident.menu_root"
+                  action="incident_configuration_action"/>
+
+        <menuitem name="Incident Tags" id="sudo_incident_tags_menu" parent="sudo_incident_configuration_menu"
+                  action="incident_tags_action"/>
+
+        <record id="sudo_incident_tags_form_view" model="ir.ui.view">
+            <field name="name">Tags</field>
+            <field name="model">sudo_incident.tags</field>
+            <field name="arch" type="xml">
+                <form string="Tags" duplicate="0">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="sudo_incident_tags_tree_view" model="ir.ui.view">
+            <field name="name">Tags Tree View</field>
+            <field name="model">sudo_incident.tags</field>
+            <field name="arch" type="xml">
+                <tree string="Tags">
+                    <field name="name"/>
+
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

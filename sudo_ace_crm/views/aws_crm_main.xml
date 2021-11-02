@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Inherit Form View to Modify it -->
+        <record id="crm_inherit_form_new" model="ir.ui.view">
+            <field name="name">CRM Form</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                   <xpath expr="//field[@name='team_id']" position="after">
+                        <group>
+                            <field name="apn_crmunique_identifier" readonly="1"/>
+                            <field name="sent_to_aws" invisible="1" force_save="1" readonly="1"/>
+                            <field name="from_ui" invisible="1"/>
+                            <field name="partner_crmunique_identifier" readonly="1" force_save="1"/>
+
+<!--                                                        <field name="country_name" invisible="1"/>-->
+                        </group>
+                </xpath>
+                                <xpath expr="//page[@name='lead']//field[@name='website']" position="attributes">
+                                    <attribute name="invisible">1</attribute>
+                                </xpath>
+                                <xpath expr="//page[@name='lead']//field[@name='lang_id']" position="after">
+                                    <field name="website_ids"/>
+                                </xpath>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="crm.crm_lead_action_pipeline">
+            <field name="name">Pipeline</field>
+            <field name="res_model">crm.lead</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'default_from_ui': True}</field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="res.groups" id="incident_manager_security">
+            <field name="name">Incident Manager</field>
+        </record>
+
+        <record model="res.groups" id="incident_group_l1_security">
+            <field name="name">Incident Group L1</field>
+        </record>
+        <!--         <record id="incident_groupl1_access" model="ir.rule">-->
+        <!--            <field name="name">Incident Group L1 Access</field>-->
+        <!--            <field name="model_id" ref="model_sudo_incident_sudo_incident"/>-->
+        <!--            <field name="groups" eval="[(4, ref('sudo_incident.incident_group_l1_security'))]"/>-->
+        <!--            <field name="perm_read" eval="0"/>-->
+        <!--            <field name="perm_write" eval="0"/>-->
+        <!--            <field name="perm_create" eval="0"/>-->
+        <!--            <field name="perm_unlink" eval="0"/>-->
+        <!--            <field name="domain_force">[('assign_group','=','l1')]</field>-->
+        <!--        </record>-->
+        <record model="res.groups" id="incident_group_l2_security">
+            <field name="name">Incident Group L2</field>
+        </record>
+        <!--        <record id="base.group_user" model="res.groups">-->
+        <!--            <field name="name">Sudo User</field>-->
+        <!--            <field name="users" eval="[(4, ref('base.user_root'))]"/>-->
+        <!--            <field name="implied_ids" eval="[(4, ref('sudo_incident_delete'))]"></field>-->
+        <!--        </record>-->
+
+        <!--         Security Group for User (hide Delete Option) -->
+        <!--        <record id="incident_delete_user_only_id_new" model="ir.rule">-->
+        <!--            <field name="name">User: Incident Delete</field>-->
+        <!--            <field name="model_id" ref="sudo_incident.model_sudo_incident_sudo_incident"/>-->
+        <!--            <field name="domain_force">[('user_id','=',user.id)]</field>-->
+        <!--            &lt;!&ndash;            <field name="groups" eval="[(4,ref('sudo_incident.sudo_incident_delete'))]"/>&ndash;&gt;-->
+        <!--            <field name="groups" eval="[(4,ref('base.group_user'))]"/>-->
+        <!--            <field name="perm_read" eval="1"/>-->
+        <!--            <field name="perm_write" eval="1"/>-->
+        <!--            <field name="perm_create" eval="1"/>-->
+        <!--            <field name="perm_unlink" eval="0"/>-->
+        <!--        </record>-->
+    </data>
+</odoo>

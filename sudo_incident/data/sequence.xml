@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Sequences for sale.order -->
+        <record id="sudo_incident_sequence_new" model="ir.sequence">
+            <field name="name">Sudo Incident ID</field>
+            <field name="code">sudo.si_incident</field>
+            <field name="prefix">IM</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

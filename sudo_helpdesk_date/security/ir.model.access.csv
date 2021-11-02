@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sudo_helpdesk_date_sudo_helpdesk_date,sudo_helpdesk_date.sudo_helpdesk_date,model_sudo_helpdesk_date_sudo_helpdesk_date,base.group_user,1,1,1,1

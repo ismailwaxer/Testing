@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sudo_webhook_action" model="ir.actions.act_window">
+            <field name="name">Incident Webhook Url</field>
+            <field name="res_model">sudo_incident.webhook</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!--        <menuitem name="Configuration" id="sudo_incident_configuration_menu" parent="sudo_incident.menu_root"-->
+<!--                  action="incident_configuration_action"/>-->
+
+        <menuitem name="WebHook Configuration" id="sudo_webhook_url_menu" parent="sudo_incident_configuration_menu"
+                  action="sudo_webhook_action"/>
+
+        <record id="sudo_webhook_form_view" model="ir.ui.view">
+            <field name="name">WebHook</field>
+            <field name="model">sudo_incident.webhook</field>
+            <field name="arch" type="xml">
+                <form string="WebHook" duplicate="0">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="webhook_url"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="sudo_webhook_tree_view" model="ir.ui.view">
+            <field name="name">WebHook Tree View</field>
+            <field name="model">sudo_incident.webhook</field>
+            <field name="arch" type="xml">
+                <tree string="WebHook">
+                    <field name="name"/>
+                    <field name="webhook_url" widget="url"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

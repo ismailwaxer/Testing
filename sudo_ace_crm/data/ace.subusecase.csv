@@ -1,0 +1,97 @@
+id,name,case_id:id
+Computer_Vision_Video_Analysis,Computer Vision - Video Analysis,ai_machine_learning
+OCR,OCR,ai_machine_learning
+Medical_Imaging,Medical Imaging,ai_machine_learning
+Face_Detection,Face Detection,ai_machine_learning
+Natural_Language_Understanding_Sentiment_analysis,Natural Language Understanding - Sentiment analysis,ai_machine_learning
+Topic_modeling,Topic modeling,ai_machine_learning
+Entity_recognition,Entity recognition,ai_machine_learning
+Language_recognition,Language recognition,ai_machine_learning
+Language_Translation,Language Translation,ai_machine_learning
+Text_to_speech,Text to speech,ai_machine_learning
+speech_to_text,speech to text,ai_machine_learning
+Recommendations,Recommendations,ai_machine_learning
+Forecasting_time_series_analysis,Forecasting - time series analysis,ai_machine_learning
+demand,demand,ai_machine_learning
+Personalization,Personalization,ai_machine_learning
+Conversational_Interfaces,Conversational Interfaces,ai_machine_learning
+Fraud_and_Anomaly_Detection,Fraud and Anomaly Detection,ai_machine_learning
+Big_data_analytics_data_science,Big data analytics & data science,big_data
+Business_Intelligence_data_visualization,Business Intelligence & data visualization,big_data
+Data_integration_ETL,Data integration & ETL,big_data
+Data_Warehouse,Data Warehouse,big_data
+Real_time_Analytics,Real-time Analytics,big_data
+Data_Lake,Data Lake,big_data
+Microsoft_Apps,Microsoft Apps,business_applications
+Oracle_Production,Oracle Production,business_applications
+Oracle_Non_Prod,Oracle Non-Prod,business_applications
+SAP_Production,SAP Production,business_applications
+SAP_Non_Prod,SAP Non-Prod,business_applications
+Mainframe_Modernization,Mainframe Modernization,business_applications
+Contact_Center,Contact Center,business_applications
+Other,Other,cloud_management_tools_devOps
+Continuous_Integration_Continuous_Delivery_(CICD),Continuous Integration & Continuous Delivery (CICD),cloud_management_tools_devOps
+Monitoring_logging_performance,Monitoring logging and performance,cloud_management_tools_devOps
+Infrastructure_as_code,Infrastructure as code,cloud_management_tools_devOps
+Productivity_Applications,Productivity Applications,cloud_management_tools_devOps
+AWS_Lambda,AWS Lambda,containers_serverless
+Kubernetes,Kubernetes,containers_serverless
+OpenShift,OpenShift,containers_serverless
+Desktop_App_Streaming,Desktop & App Streaming,end_user_computing
+Mobile_Device_Application_Management,Mobile Device and Application Management,end_user_computing
+End_User_Productivity_Apps,End User Productivity Apps,end_user_computing
+Oil_Gas,Oil & Gas,energy
+Utilities,Utilities,energy
+Insurance,Insurance,financial_Services
+PCI,PCI,financial_Services
+Payment_Processing,Payment Processing,financial_Services
+Banking,Banking,financial_Services
+Capital_Markets,Capital Markets,financial_Services
+Risk_Compliance,Risk & Compliance,financial_Services
+Big_Data_Grid,Big Data/Grid,financial_Services
+Market_Data_Financial_Content,Market Data & Financial Content,financial_Services
+Core_Systems,Core Systems,financial_Services
+Digital,Digital (AI/ML Predicative Analytics),financial_Services
+Genomics,Genomics,healthcare_life_Sciences
+HIPAA,HIPAA,healthcare_life_Sciences
+HITRUST,HITRUST,healthcare_life_Sciences
+GxP,GxP,healthcare_life_Sciences
+GDPR,GDPR,healthcare_life_Sciences
+Biopharma,Biopharma,healthcare_life_Sciences
+Med_device,Med device,healthcare_life_Sciences
+Payer,Payer,healthcare_life_Sciences
+Provider,Provider,healthcare_life_Sciences
+Product_Design_Simulation,Product Design and Simulation,industrial_software
+Electronic_Design_Automation,Electronic Design Automation,industrial_software
+Architecture_Engineering_and_Construction,Architecture Engineering and Construction,industrial_software
+Other_Engineering,Other Engineering,industrial_software
+Computer_Aided_Engineering,Computer Aided Engineering,industrial_software
+Computer_Aided_Manufacturing,Computer Aided Manufacturing,industrial_software
+Product_Lifecycle_Management,Product Lifecycle Management,industrial_software
+Production_Planning,Production Planning,industrial_software
+Production_Automation,Production – Automation,industrial_software
+Production_SCADA,Production – SCADA,industrial_software
+Production_MES,Production – MES,industrial_software
+Industrial_IoT,Industrial IoT,industrial_software
+Industrial_Asset_Management,Industrial Asset Management,industrial_software
+Production_Logistics,Production Logistics,industrial_software
+Manufacturing_Engineering_System,Manufacturing Engineering System,industrial_software
+Connected_Space,Connected Space,iot
+Connected_Transport,Connected Transport,iot
+Connected_Commerce,Connected Commerce,iot
+Connected_Operations,Connected Operations,iot
+Connected_Health,Connected Health,iot
+Content_Creation_Processing,Content Creation & Processing,media_High_performance_computing
+Broadcast_OTT,Broadcast & OTT,media_High_performance_computing
+Content_Management_Distribution,Content Management & Distribution,media_High_performance_computing
+High_Performance_Technical_Computing,High Performance Technical Computing (HPTC),media_High_performance_computing
+High_Performance_Business_Computing_,High Performance Business Computing (HPBC),media_High_performance_computing
+High_Throughput_Computing,High Throughput Computing (HTC),media_High_performance_computing
+Database_Migration,Database Migration,migration
+Application_Migration,Application Migration,migration
+Direct_Connect,Direct Connect,networking
+Other,Other,networking
+Archive,Archive,storage
+Backup,Backup,storage
+Primary_Storage,Primary Storage,storage
+Disaster_Recovery,Disaster Recovery,storage

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sudo_ace_use_case,ace.usecase,model_ace_usecase,base.group_user,1,1,1,1
+access_sudo_ace_sub_use_case,ace.subusecase,model_ace_subusecase,base.group_user,1,1,1,1
