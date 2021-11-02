@@ -27,7 +27,7 @@
         # 'views/ace_industry.xml',
         'views/ace_use_case.xml',
         'views/ace_sub_use_case.xml',
-        # 'views/res_partner.xml',
+        'views/res_partner.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
